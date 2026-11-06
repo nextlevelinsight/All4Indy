@@ -180,6 +180,7 @@
     $('#passTitle').textContent = b.t; $('#passBy').textContent = 'by ' + b.a;
     const c = $('#passCover'); c.style.setProperty('--c', b.c); c.innerHTML = coverHTML(b);
     c.firstChild.style.cssText += ';position:absolute;inset:0;border-radius:0;box-shadow:none';
+    $('#passPaper').href = 'https://example.com/' + b.t.toLowerCase().replace(/[^a-z]+/g, '-'); $('#passPaper').setAttribute('aria-label', 'Order the paperback of ' + b.t + ' from ' + b.a + "'s own site, opens in a new tab");
     opt.checked = false; describe(); pass.classList.remove('sent'); goBtn.textContent = 'Get the ebook (' + b.p + ')';
     wrap.hidden = false; goBtn.focus();
   }

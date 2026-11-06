@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,600;1,6..96,400;1,6..96,500&family=Figtree:wght@400;500;600&display=swap">
-<link rel="stylesheet" href="style.css?v=4">
+<link rel="stylesheet" href="style.css?v=5">
 </head>
 <body data-tone="light">
 
@@ -99,10 +99,11 @@
           <li><b>You get the buyer's email.</b> With their say-so, so the list is truly yours.</li>
           <li><b>We help you market it.</b> Shelves, newsletters, launch weeks.</li>
           <li><b>No website needed.</b> We host the page, take the payment and send the file.</li>
+          <li><b>Sell paper too.</b> Readers can jump from your ebook page straight to your own site to order the physical book.</li>
         </ul>
         <div class="two">
           <div><h3>Sell through us</h3><p>We handle checkout and delivery. You get paid and get the emails.</p></div>
-          <div><h3>Send readers to you</h3><p>Already have a store? We link to it and earn a small referral.</p></div>
+          <div><h3>Send readers to you</h3><p>Already have a store, or a print edition? Readers go straight to your site, and we earn a small referral.</p></div>
         </div>
         <a class="btn sun" href="mailto:hello@example.com?subject=My%20book%20for%20The%20Open%20Shelf">Tell us about your book</a>
       </div>
@@ -138,12 +139,14 @@
       <label class="opt"><input type="checkbox" id="optIn"><span>Share my email with the author so they can write to me. <small>Your choice, and you can say no.</small></span></label>
       <p class="pass-state" id="passState" aria-live="polite">The author receives: the sale only.</p>
       <div class="actions"><button class="btn sun" type="button" id="passGo">Get the ebook</button><button class="btn line dark" type="button" id="passClose">Keep browsing</button></div>
-      <p class="pass-demo">Demo only. No payment is taken.</p>
+      <p class="pass-or">Prefer paper?</p>
+      <a class="btn line dark pass-paper" id="passPaper" href="https://example.com" target="_blank" rel="noopener">Order the paperback from the author's own site</a>
+      <p class="pass-demo">Demo only. No payment is taken, and the author link is a placeholder.</p>
       <div class="pass-stamp" aria-hidden="true">Sent</div>
     </div>
   </div>
 </div>
 
-<script src="app.js?v=3"></script>
+<script src="app.js?v=5"></script>
 </body>
 </html>

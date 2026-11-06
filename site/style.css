@@ -176,3 +176,6 @@ footer{padding:36px max(22px,6vw);background:var(--night);color:#8C95B5;font-siz
   .pass,.pass.sent .pass-stamp{animation:none}.pass.sent .pass-stamp{transform:rotate(-10deg);opacity:.95}
 }
 body.calm .gate-sky,body.calm .ebook{animation:none}
+
+.pass-or{margin-top:14px;font:600 .7rem var(--text);letter-spacing:.18em;text-transform:uppercase;color:var(--ink-2)}
+.pass .pass-paper{display:block;text-align:center;margin-top:8px;padding:11px 16px;font-size:.9rem}
