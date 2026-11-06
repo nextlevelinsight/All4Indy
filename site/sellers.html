@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Seller Portal · The Open Shelf</title>
+<meta name="description" content="Sign up, read the template agreement and disclosures, and see a demo seller dashboard for The Open Shelf.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,600;1,6..96,400&family=Figtree:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="sellers.css?v=1">
+</head>
+<body>
+<div class="banner" role="note">Demo and templates only. Nothing here is legal advice, no data is sent anywhere, and every figure and name is fictional.</div>
+
+<header class="bar">
+  <a class="mark" href="index.html">The Open Shelf</a>
+  <nav aria-label="Seller portal">
+    <a href="#how">How it works</a><a href="#fees">Fees</a><a href="#signup">Sign up</a><a href="#agreement">Agreement</a><a href="#dashboard">Dashboard</a>
+  </nav>
+</header>
+
+<main>
+<section class="hero">
+  <p class="eyebrow">Seller portal</p>
+  <h1>Bring your book. <em>Watch every sale land.</em></h1>
+  <p class="lede">Sign up, read the terms in plain sight, and see your money as it moves. Here is how it all flows, from application to payout.</p>
+  <a class="btn sun" href="#signup">Start an application</a> <a class="btn line" href="#dashboard">See the demo dashboard</a>
+</section>
+
+<section id="how" class="block">
+  <h2>How it works</h2>
+  <ol class="steps">
+    <li><b>Apply.</b> Tell us about you and your book. Takes a few minutes.</li>
+    <li><b>Verify.</b> We confirm who you are and set up payouts through our payments partner.</li>
+    <li><b>Sign the agreement.</b> Fees, referral terms and disclosures, written in plain language. You can read it before you apply.</li>
+    <li><b>List your book.</b> Upload your EPUB, cover and sample chapter. Or add a link to your own store. Add your newsletter link.</li>
+    <li><b>Get found and get paid.</b> We help market it. Sales show in your dashboard within minutes, and payouts arrive monthly.</li>
+  </ol>
+</section>
+
+<section id="fees" class="block alt">
+  <h2>Fees, in the open</h2>
+  <div class="two">
+    <article class="card"><h3>Sell through us</h3><p>We take payment, deliver the ebook and pay you. You see every fee on every sale.</p>
+      <ul><li>Platform fee: <b>10%</b> of the sale price (<b>5%</b> for founding authors, first year)</li><li>Card processing: passed through at cost</li><li>Tax: collected and remitted as set out in the agreement</li></ul></article>
+    <article class="card"><h3>Send readers to you</h3><p>You sell on your own site, including paperbacks. We link to you.</p>
+      <ul><li>Referral fee: <b>5 to 8%</b> of verified referred orders, or a flat monthly listing fee</li><li>Billed monthly, shown in your statement</li><li>You keep 100% of the sale itself</li></ul></article>
+  </div>
+  <div class="calc card" aria-labelledby="calcT">
+    <h3 id="calcT">Fee calculator</h3>
+    <div class="calc-row">
+      <label for="price">Ebook price ($)</label><input id="price" type="number" min="0.99" step="0.5" value="6.99">
+      <label class="chk"><input id="founding" type="checkbox"> Founding author (5%)</label>
+    </div>
+    <table class="split-table" aria-live="polite">
+      <tr><th>Reader pays</th><td id="cGross"></td></tr>
+      <tr><th>Card processing (assumed 2.9% + $0.30)</th><td id="cCard"></td></tr>
+      <tr><th>The Open Shelf fee</th><td id="cFee"></td></tr>
+      <tr class="net"><th>You receive</th><td id="cNet"></td></tr>
+    </table>
+    <p class="fine">Illustration only. Real rates will be set in the agreement.</p>
+  </div>
+</section>
+
+<section id="signup" class="block">
+  <h2>Sign up</h2>
+  <form id="signupForm" class="form" novalidate>
+    <div class="grid">
+      <label>Your name<input name="name" required autocomplete="off"></label>
+      <label>Pen name (if different)<input name="pen" autocomplete="off"></label>
+      <label>Contact email<input name="email" type="email" required autocomplete="off"></label>
+      <label>Your website<input name="site" type="url" placeholder="https://" autocomplete="off"></label>
+      <label>Newsletter sign-up link<input name="news" type="url" placeholder="https://" autocomplete="off"></label>
+      <label>Number of books to list<input name="n" type="number" min="1" value="1"></label>
+    </div>
+    <fieldset><legend>How would you like to sell?</legend>
+      <label class="chk"><input type="radio" name="model" value="through" checked> Sell through The Open Shelf</label>
+      <label class="chk"><input type="radio" name="model" value="link"> Send readers to my own site (including paperbacks)</label>
+      <label class="chk"><input type="radio" name="model" value="both"> Both</label>
+    </fieldset>
+    <label class="chk"><input type="checkbox" name="ai"> I will tell readers if AI tools were used to write my book.</label>
+    <label class="chk"><input type="checkbox" name="rights" required> I own the rights to the books I list.</label>
+    <button class="btn sun" type="submit">Submit application</button>
+    <p class="fine">Demo. Nothing is sent or stored. Please do not enter real personal details.</p>
+    <p id="signupMsg" class="ok" role="status" hidden></p>
+  </form>
+</section>
+
+<section id="agreement" class="block alt">
+  <h2>Template author agreement</h2>
+  <p class="fine strong">Template for illustration. Placeholder wording in [brackets]. Have a lawyer draft the real thing.</p>
+  <div class="doc" tabindex="0" aria-label="Template author agreement">
+    <h3>1. Parties</h3><p>This agreement is between [Company Legal Name] ("the Shelf") and [Author Legal Name] ("the Author").</p>
+    <h3>2. What the Author provides</h3><p>The Author lists one or more books, and confirms they own or control the rights to each. The Author grants the Shelf a non-exclusive licence to host, display, market and deliver the listed books to readers. The Author keeps all other rights, and may sell elsewhere.</p>
+    <h3>3. Sell-through fees</h3><p>For books sold through the Shelf, the Shelf keeps a platform fee of [10]% of the sale price, plus card processing costs at cost. The remainder is the Author's. Founding authors pay [5]% for [12] months from signing.</p>
+    <h3>4. Referral fee for link-outs</h3><p>Where the Author sells on their own site and the Shelf refers the reader, the Author pays the Shelf a referral fee of [5 to 8]% of the sale price of verified referred orders (or a flat fee of [$__] per month where agreed). A referred order means a purchase completed within [30] days of a reader following the Shelf's tracked link, as shown by [coupon code / order webhook / author statement]. The Shelf bills monthly. The Author may dispute a charge within [30] days.</p>
+    <h3>5. Payouts</h3><p>Sale proceeds are held for [14 to 30] days for refunds, then become available. Payouts are made monthly once the available balance reaches [$__], through the Shelf's payments partner. The Author must complete identity and tax verification before the first payout.</p>
+    <h3>6. Refunds and chargebacks</h3><p>If a sale is refunded or reversed, the amount is deducted from the Author's balance. Refund policy for readers: [state policy].</p>
+    <h3>7. Taxes</h3><p>[The Shelf collects and remits sales tax and VAT on sales it makes as seller / a merchant of record does so.] The Author is responsible for their own income tax and will provide the tax forms requested.</p>
+    <h3>8. Reader ownership</h3><p>Readers who buy through the Shelf receive a DRM-free copy and may re-download it from their library without time limit. The Author agrees this right survives termination of this agreement for copies already sold.</p>
+    <h3>9. Reader data and newsletters</h3><p>The Shelf does not share reader email addresses with the Author. The Shelf will show the Author's newsletter sign-up link to every buyer; readers join on the Author's own page. The Shelf may email readers its own news if they opted in. The Author will handle any list they build under applicable law.</p>
+    <h3>10. Content and AI disclosure</h3><p>The Author will not list unlawful, infringing or deceptive material, and will disclose if AI tools were used to generate the text, cover or narration. The Shelf may remove a listing that breaks these rules, after notice where reasonable.</p>
+    <h3>11. Reporting</h3><p>The Shelf provides a seller dashboard showing sales, fees, refunds, balances and payouts, updated [within minutes] of each event, and a monthly statement.</p>
+    <h3>12. Term and ending this agreement</h3><p>Either side may end this agreement on [30] days' written notice. Money owed is settled within [60] days.</p>
+    <h3>13. Liability and law</h3><p>[Liability limits.] This agreement is governed by the laws of [jurisdiction].</p>
+  </div>
+
+  <div class="disc">
+    <h3>Plain-language disclosures</h3>
+    <ul>
+      <li><b>Fees:</b> every sale shows the card fee, our fee and your net. No hidden charges.</li>
+      <li><b>Timing:</b> funds are held [14 to 30] days for refunds, then paid monthly.</li>
+      <li><b>Data:</b> we keep reader emails for receipts and downloads. We do not give them to you. Readers can join your list through your link.</li>
+      <li><b>Tracking:</b> link-out referrals are measured with tracked links. We will explain how in your statement.</li>
+      <li><b>AI:</b> disclose AI use. Listings may be removed if misleading.</li>
+      <li><b>Not a guarantee:</b> we help market your book but cannot promise sales.</li>
+    </ul>
+  </div>
+
+  <form id="signForm" class="form sign">
+    <label class="chk"><input type="checkbox" id="agreeChk"> I have read the agreement and disclosures.</label>
+    <label>Type your full name to sign<input id="sigName" autocomplete="off"></label>
+    <button class="btn sun" id="signBtn" type="submit" disabled>Sign agreement</button>
+    <p id="signMsg" class="ok" role="status" hidden></p>
+  </form>
+</section>
+
+<section id="dashboard" class="block">
+  <h2>Demo dashboard</h2>
+  <p class="fine">Fictional author "Marisol Vane", sample sales. Press the button to see a new sale arrive.</p>
+  <div class="cards">
+    <div class="stat"><span>Pending (in refund window)</span><b id="sPend">$0.00</b></div>
+    <div class="stat"><span>Available</span><b id="sAvail">$0.00</b></div>
+    <div class="stat"><span>Paid out to date</span><b id="sPaid">$0.00</b></div>
+    <div class="stat"><span>Next payout</span><b>Dec 1</b></div>
+  </div>
+
+  <div class="dash-grid">
+    <div class="panel">
+      <div class="panel-h"><h3>Live sales</h3><button class="btn sun small" id="simSale" type="button">Simulate a sale</button></div>
+      <div class="tablewrap"><table class="sales"><thead><tr><th>Time</th><th>Book</th><th>Gross</th><th>Card</th><th>Fee</th><th>You get</th><th>Status</th></tr></thead><tbody id="salesBody"></tbody></table></div>
+    </div>
+    <div class="panel">
+      <h3>This month</h3>
+      <div class="bars" id="bars" role="img" aria-label="Sales per day this month, sample data"></div>
+      <h3 class="mt">Readers and links</h3>
+      <ul class="kv">
+        <li><span>Newsletter link clicks</span><b id="kNews">0</b></li>
+        <li><span>Paperback link clicks</span><b id="kPaper">0</b></li>
+        <li><span>Tracked paperback orders</span><b>3</b></li>
+        <li><span>Referral fee owed (5%)</span><b>$4.35</b></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="panel">
+    <div class="panel-h"><h3>Monthly statements</h3></div>
+    <table class="sales"><thead><tr><th>Month</th><th>Sales</th><th>Net</th><th>Referral fees</th><th>Paid</th><th></th></tr></thead>
+      <tbody>
+        <tr><td>September</td><td>112</td><td>$612.40</td><td>$6.10</td><td>Oct 1</td><td><button class="link" data-csv="Sep">Download CSV</button></td></tr>
+        <tr><td>October</td><td>134</td><td>$731.85</td><td>$8.20</td><td>Nov 1</td><td><button class="link" data-csv="Oct">Download CSV</button></td></tr>
+      </tbody></table>
+  </div>
+</section>
+</main>
+
+<footer><p>The Open Shelf seller portal demo. Every author, book, price and figure on this page is fictional.</p></footer>
+<script src="sellers.js?v=1"></script>
+</body>
+</html>
