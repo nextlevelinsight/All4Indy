@@ -1,35 +1,40 @@
 # The Open Shelf: is the business plausible?
 
-Short answer: yes as a small, slow, low-cost curation and referral business. No as a way to get rich quickly. This is reasoning, not market data. I have not researched or verified any market figures, and the page contains none.
+Short answer: yes as a small, slow, community-led ebook marketplace. Not as a fast-growth play. This is reasoning, not market research. No market figures were verified and none are on the page.
 
-## The model
-Readers browse a curated shelf. Every book links to the author's own store. The author sells and ships. The shelf earns a referral commission on sales it sent. Revenue comes only from that commission.
+## The model (updated)
+Two ways for an author to list, their choice:
+1. **Sell through us.** We host the book page, take payment, deliver the ebook file, then pay the author the larger share. We keep a small cut and market the book. No author website needed.
+2. **Send readers to you.** The author already has a store. We link to it and earn a small referral.
+
+**The differentiator:** with the buyer's opt-in at checkout, the author receives the buyer's email. They own that list. Most marketplaces keep it.
 
 ## What makes it work
-- **Authors get a better deal than retail shelves.** They keep the customer relationship and most of the sale. The commission only has to beat what they would otherwise lose to a retailer's cut.
-- **Curation is the product.** A trusted, small shelf is the reason a reader comes. Size matters less than taste.
-- **Near-zero running cost.** A static site, no inventory, no fulfilment, no payment handling.
+- **Authors get what retail shelves withhold:** the larger share and the reader relationship.
+- **Curation and marketing are the product.** A trusted small shelf plus real launch help is what the cut pays for.
+- **Low overhead:** ebooks have no inventory or shipping.
 
-## The hard parts (be honest about these)
-1. **Tracking sales you did not process.** The shelf never sees the checkout. You need a way to attribute a sale: a unique referral link (UTM or affiliate code) plus the author's own report, or an affiliate platform the author's store supports (many store tools and platforms offer affiliate or referral features). This is the main technical and trust problem. Start with a simple monthly honesty-based report from each author and graduate to automatic tracking.
-2. **Authors must accept a commission on their own site.** Early on, offer a low or zero commission to seed the shelf, with a rate agreed in writing.
-3. **Two-sided cold start.** Few readers means few sales means authors see little reason to join. Fix by starting with a narrow niche (one genre, one region, one community) where you can personally bring readers.
-4. **Leakage.** A reader can click through, then buy later or elsewhere. Attribution windows and cookies reduce this but never remove it.
-5. **Small money.** Each sale pays a fraction of a book price. Meaningful income needs volume or a higher-value offer.
+## The hard parts
+1. **Being the seller.** Collecting money for others means payment processing, refunds, chargebacks, and **sales tax/VAT on digital goods**, which varies by country and state. A merchant-of-record service (for example Paddle or Lemon Squeezy style providers) or a marketplace-capable processor (for example Stripe Connect) can handle much of this. Pricing, availability and terms need checking before you choose. Get accounting advice.
+2. **Payouts to authors.** Split payments, minimum payout thresholds, tax forms for authors, and currency. Connect-style payout tools exist; verify fit and fees.
+3. **Email sharing consent.** Share a buyer's email only with an explicit, unticked opt-in at checkout, clear wording, and a way for the author to honour unsubscribes. Privacy rules (GDPR, CAN-SPAM, and similar) apply, and the author becomes responsible for how they use the list. Needs legal review. The demo page already shows the opt-in pattern.
+4. **Ebook delivery and piracy.** Deliver a download link by email; decide on watermarking versus plain files. DRM annoys readers and is easy to remove, so many indie sellers skip it.
+5. **Content responsibility.** As seller you need a content policy, takedown process and author agreement (rights warranty, refunds, payout terms).
+6. **Cold start.** Few readers means few sales means few authors. Start in one niche where you can bring readers yourself.
 
-## A realistic growth path
-1. **Prove it by hand.** 10 to 20 authors in one niche, a plain referral link each, a spreadsheet. Goal: one real attributed sale.
-2. **Add trust.** Short author pages, reader newsletter, seasonal themed shelves.
-3. **Add revenue that is not per-sale.** Optional paid featured slots for authors, a small listing fee, sponsored newsletter issues.
-4. **Automate.** Affiliate tooling, author dashboard, automatic payouts.
-5. **Grow the shelf by community, not scale.** Genre or region shelves, partnerships with indie bookshops, reading groups.
+## Growth path
+1. **Hand-run pilot.** 10 to 20 authors in one genre, manual listings, payment through a provider's hosted checkout, payouts done monthly by hand. Goal: first paid, delivered, paid-out sale.
+2. **Make the promise real.** Author dashboard showing sales and opted-in emails; launch-week support for each book.
+3. **Marketing engine.** Genre shelves, a reader newsletter, seasonal events, author takeovers.
+4. **More revenue lines (optional):** featured slots, a premium author tier, sponsorship in the newsletter.
+5. **Automate payouts and tax handling.**
 
-## Open questions to answer before committing
-- Which niche do you start in, and do you personally have reach there?
-- What commission is fair, and is it percent of sale or a flat amount?
-- How will you confirm sales: author report, shared link tracking, or a platform?
-- Is the shelf free for authors at the start, with fees only later?
-- Legal basics: affiliate disclosure on every outbound link, a short author agreement, and privacy notice if you collect emails.
+## Decisions you still own
+- The exact split. The site says only "the larger share" and "a small cut". Pick a real number and write it into the author agreement.
+- Referral commission for the link-out option.
+- Which payments and tax provider to use.
+- Which niche to start with, and what you personally bring to it.
+- Whether to offer exclusivity or let authors sell elsewhere too.
 
 ## Verdict
-Plausible as a side project or small community business with very low risk. Treat it as an experiment: the first milestone is a single tracked sale, not scale.
+Plausible as a lean experiment, and more differentiated than the referral-only version, but with real compliance and payments work. First milestone: one complete sale cycle (pay, deliver, payout, opted-in email) with a handful of authors.

@@ -31,3 +31,15 @@ Rooms: separate scenes with different behaviour, no continuous camera. Devices: 
 **Peak sentence:** "I clicked a book and it stamped the author's own website on a library slip."
 **Tell-someone:** "It's the site where the bookshop hands you straight to the author."
 **Authored silence:** the idea scene holds still on purpose between lines.
+
+
+---
+## Revision 2: sky world and ebook marketplace
+- Model (user): authors choose to sell ebooks through the shelf (we take payment, deliver, pay them the larger share) or link readers to their own site. Differentiator (user): authors receive the buyer's email (with buyer opt-in), the majority of the sale, and marketing help.
+- Design (user): drop the typical cream/terracotta/serif-plus-Inter look. Immersive, more movement, like quadplex80's cloud gate. Direction chosen: soft sky world.
+- Assets: kie.ai nano-banana-2 stills (dawn, day, high morning, dusk, night plus a portrait dawn), kling/v2-1-pro 5s clips (dawn flight, cloud flight) encoded all-intra-ish for scrubbing.
+- Design system: Bodoni Moda (headlines, italic accents) + Figtree. Sky palette by time of day, one orange sun accent, sharp 2px corners, no pills or glass. Chrome: wordmark, text-link nav, a time-of-day altitude gauge instead of a counter.
+- Grammar: rooms by time of day. Dawn (scrub flight + drifting covers), Morning (kinetic promises), Day (lateral pan shelf, PEAK), Noon (second scrub flight + money steps), Dusk (circular reveal for authors), Night (pointer lantern + stars).
+- Signature move: the boarding pass. Clicking an ebook opens a pass with an unticked "share my email with the author" box that changes what the author receives, then stamps SENT.
+- Feeling curve: welcomed (dawn), calm certainty (morning), delight (day, peak), trust (noon), invitation (dusk), resolve (night).
+- Entry gate with "Enter without motion" option.
