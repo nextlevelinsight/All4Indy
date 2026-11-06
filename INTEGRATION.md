@@ -67,3 +67,10 @@ Export only the seller's own data. Reader emails and identities are never includ
 - Which chart-of-accounts mapping to apply by default for authors.
 - Whether pen names map to "books", "projects", or a new dimension in Plotted Balance.
 - Authentication details for the connect flow.
+
+## Sales tax needs (added)
+- Each sale record needs the buyer's tax jurisdiction (state at minimum, ZIP/address-level where a rate service is used), `tax_cents` split by jurisdiction, and a flag for who collected it (`tax_collector`: `merchant_of_record` | `open_shelf`).
+- Add `tax_category` (`digital_ebook`, `digital_audio`) so Plotted Balance applies per-state taxability.
+- Plotted Balance's nexus monitor should count Open Shelf sales by state and transaction count, since transaction-count thresholds will trigger first at low prices.
+- If a merchant of record collects the tax, Open Shelf's books record the sale net of that provider's fee and carry no sales-tax liability; if Open Shelf collects, the liability posts to Sales Tax Payable and the return worksheets apply.
+- Open question: whether Open Shelf is treated as a marketplace facilitator in each state (it likely collects for its authors).

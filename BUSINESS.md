@@ -121,3 +121,22 @@ Do not rely on AI-text detectors; they are unreliable and will wrongly flag real
 - **We** keep the buyer's email for the receipt and library. An unticked, optional checkbox adds them to The Open Shelf's newsletter and the "authors you've bought from" email (author site, newsletter link, paperback link). Needs one-click unsubscribe and a stored record of when and to what wording they agreed.
 - Seller portal: replace the "opted-in emails" list with newsletter-link click counts.
 - Open point: authors may dislike us holding the list. Say so plainly in the author agreement, always show the author's link to every buyer, and have a lawyer review the consent wording.
+
+---
+
+## Merchant of record vs doing it yourself (as of Nov 2026)
+Fees below come from third-party comparison sites and competitor blogs, not the providers' own pages. Confirm directly. This is not tax advice; confirm the tax points with an accountant.
+
+**Merchant of record (MoR) reported costs**
+- Paddle: 5% + $0.50 (some sources say custom pricing). Lemon Squeezy: 5% + $0.50, with extras for international, PayPal and subscriptions. Stripe Managed Payments (preview): about 6.4% + $0.30. Polar: 4% + $0.40 per its own page, other sources say 5% + $0.50. FastSpring: about 5.9% + $0.95, by quote.
+- The MoR fee replaces the card fee. On a $5 book that is about $0.75 (15%) against about $0.45 (9%) with plain Stripe. With our 10% on top, the author nets about 75% at $5 and about 78% at $6.99, against about 81% and 80% without an MoR.
+- Unconfirmed: whether these providers accept a marketplace paying many third-party authors. Several were built for software. Ask their sales teams before committing.
+
+**Doing it ourselves**
+- Plotted Balance (per its spec) covers rate lookup at sale time with a saved snapshot, per-state registration and filing settings, taxability by category, a nexus monitor with 70/90/100% alerts, return worksheets and a compliance calendar. It tracks and reports; it does not register or file.
+- Still needed: an address-level rate service, state registrations and returns (or a filing service), and a decision on origin vs destination sourcing per state.
+- Many states use a transaction-count threshold as well as a dollar one (commonly 200 sales). At low ebook prices the count is hit first, so expect to register in more states than the dollar totals suggest.
+- As a marketplace we probably collect and remit on authors' sales too (marketplace-facilitator rules). Confirm.
+- EU/UK buyers carry VAT from the first digital sale for non-EU sellers (to confirm). Block those countries at launch.
+
+**Recommendation:** pilot US-only with an MoR so nothing needs registering first; move to Stripe plus a rate service plus a filing service, with Plotted Balance as the nexus tracker and records, once volume makes the 5% + $0.50 hurt. Add other countries one at a time.
