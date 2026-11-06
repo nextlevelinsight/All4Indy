@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,600;1,6..96,400&family=Figtree:wght@400;500;600&display=swap">
-<link rel="stylesheet" href="sellers.css?v=2">
+<link rel="stylesheet" href="sellers.css?v=3">
 </head>
 <body>
 <div class="banner" role="note">Demo and templates only. Nothing here is legal advice, no data is sent anywhere, and every figure and name is fictional.</div>
@@ -154,6 +154,17 @@
     </div>
   </div>
 
+  <div class="panel pb">
+    <div class="panel-h"><h3>Plotted Balance</h3><span class="tag" id="pbTag">Not connected</span></div>
+    <p class="fine">Send your sales, fees, refunds and payouts to Plotted Balance, split by pen name and book. Demo only: nothing is sent.</p>
+    <div class="pb-actions">
+      <button class="btn sun small" id="pbConnect" type="button">Connect Plotted Balance</button>
+      <button class="btn line small" id="pbCsv" type="button">Export ledger-ready CSV</button>
+      <button class="btn line small" id="pbJson" type="button">Export JSON</button>
+    </div>
+    <ul class="pb-log" id="pbLog" aria-live="polite"></ul>
+  </div>
+
   <div class="panel">
     <div class="panel-h"><h3>Monthly statements</h3></div>
     <table class="sales"><thead><tr><th>Month</th><th>Sales</th><th>Net</th><th>Referral fees</th><th>Paid</th><th></th></tr></thead>
@@ -166,6 +177,6 @@
 </main>
 
 <footer><p>The Open Shelf seller portal demo. Every author, book, price and figure on this page is fictional.</p></footer>
-<script src="sellers.js?v=1"></script>
+<script src="sellers.js?v=2"></script>
 </body>
 </html>

@@ -75,3 +75,8 @@ fieldset{border:1.5px solid var(--line);padding:14px 16px;display:grid;gap:8px;b
 footer{padding:36px max(18px,4vw);background:var(--night);color:#B9A88E;font-size:.85rem;margin-top:40px}
 @media (max-width:760px){.two,.grid,.dash-grid{grid-template-columns:1fr}.cards{grid-template-columns:1fr 1fr}.bar nav{gap:12px}}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.sales tr.new{animation:none}.btn{transition:none}}
+.panel.pb{margin-bottom:16px}
+.pb-actions{display:flex;gap:10px;flex-wrap:wrap;margin:12px 0}
+.btn.line.small{border-color:var(--ink)}
+.pb-log{list-style:none;display:grid;gap:4px;font:.82rem ui-monospace,Menlo,monospace;color:var(--ink-2);max-height:120px;overflow:auto}
+.tag.on{background:#E4F0E6;color:var(--ok)}
