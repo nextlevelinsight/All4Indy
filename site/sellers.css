@@ -1,4 +1,4 @@
-:root{--ink:#2A1B12;--ink-2:#6B5545;--paper:#FBF4E6;--cream:#F4EAD6;--line:#E3D5BB;--sun:#F0A04B;--sun-ink:#24130A;--night:#120C07;--ok:#2E6B45;
+:root{--ink:#2A1B12;--ink-2:#54402F;--paper:#FBF4E6;--cream:#F4EAD6;--line:#E3D5BB;--sun:#F0A04B;--sun-ink:#24130A;--night:#120C07;--ok:#2E6B45;
   --display:"Bodoni Moda","Didot",Georgia,serif;--text:"Figtree",system-ui,sans-serif}
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth;scroll-padding-top:70px}
@@ -39,7 +39,7 @@ input,select{font:inherit;padding:10px 12px;border:1.5px solid var(--line);backg
 .split-table th,.split-table td{padding:8px 0;border-bottom:1px solid var(--line);text-align:left;font-weight:400}
 .split-table td{text-align:right;font-variant-numeric:tabular-nums}
 .split-table .net th,.split-table .net td{font-weight:600;font-size:1.1rem;border-bottom:0}
-.fine{font-size:.82rem;color:var(--ink-2);margin-top:10px}.fine.strong{color:#8A3B12;font-weight:600}
+.fine{font-size:.9rem;color:var(--ink-2);margin-top:10px}.fine.strong{color:#8A3B12;font-weight:600}
 .form{display:grid;gap:16px;max-width:760px}
 .grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
 .form label{display:grid;gap:5px;font-size:.88rem;font-weight:500}
@@ -53,7 +53,7 @@ fieldset{border:1.5px solid var(--line);padding:14px 16px;display:grid;gap:8px;b
 .disc ul{margin:10px 0 0 18px;display:grid;gap:6px;font-size:.95rem}
 .cards{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:14px 0 18px}
 .stat{background:var(--cream);padding:16px;border-radius:2px;display:grid;gap:6px}
-.stat span{font-size:.78rem;color:var(--ink-2);letter-spacing:.04em}
+.stat span{font-size:.85rem;color:var(--ink-2);letter-spacing:.04em}
 .stat b{font:400 1.8rem var(--display);font-variant-numeric:tabular-nums}
 .dash-grid{display:grid;grid-template-columns:1.6fr 1fr;gap:16px;margin-bottom:16px}
 .panel{background:#fff;border:1px solid var(--line);padding:18px;border-radius:2px;min-width:0}
@@ -61,7 +61,7 @@ fieldset{border:1.5px solid var(--line);padding:14px 16px;display:grid;gap:8px;b
 .tablewrap{overflow:auto;max-height:340px}
 .sales{width:100%;border-collapse:collapse;font-size:.85rem;font-variant-numeric:tabular-nums}
 .sales th{text-align:left;font-weight:600;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-2);padding:8px 8px;border-bottom:1.5px solid var(--ink);position:sticky;top:0;background:#fff}
-.sales td{padding:8px;border-bottom:1px solid var(--line);white-space:nowrap}
+.sales td{font-size:.9rem;padding:8px;border-bottom:1px solid var(--line);white-space:nowrap}
 .sales tr.new{animation:flash 2.2s ease-out}
 @keyframes flash{from{background:#FFE7BF}to{background:transparent}}
 .tag{font-size:.72rem;font-weight:600;padding:2px 8px;border-radius:2px;background:var(--cream)}

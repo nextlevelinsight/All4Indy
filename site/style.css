@@ -1,5 +1,5 @@
 :root{
-  --ink:#2A1B12; --ink-2:#6B5545; --mist:#F4EDE0; --sun:#F0A04B; --sun-ink:#24130A; --dusk:#2A1A10; --night:#120C07; --paper:#FBF4E6;
+  --ink:#2A1B12; --ink-2:#54402F; --mist:#F4EDE0; --sun:#F0A04B; --sun-ink:#24130A; --dusk:#2A1A10; --night:#120C07; --paper:#FBF4E6;
   --display:"Bodoni Moda","Didot",Georgia,serif; --text:"Figtree",system-ui,sans-serif;
   --fg:#fff;
 }
@@ -83,7 +83,7 @@ body[data-tone=light]{--fg:var(--ink)} body[data-tone=dark]{--fg:#fff}
 .shelf-head{position:absolute;top:calc(12vh + 20px);left:max(22px,6vw);z-index:3;color:#fff;text-shadow:0 2px 24px rgba(24,13,6,.6)}
 .shelf-head p{margin-top:10px;font-size:1rem;max-width:36ch}
 .track{position:absolute;left:0;bottom:11vh;display:flex;align-items:flex-end;gap:clamp(28px,5vw,80px);padding:0 14vw 0 max(22px,8vw);will-change:transform}
-.ebook{flex:0 0 auto;width:clamp(150px,19vw,250px);aspect-ratio:2/3;border:0;background:none;cursor:pointer;position:relative;perspective:700px;animation:bob 7s ease-in-out infinite;animation-delay:var(--d,0s)}
+.ebook{flex:0 0 auto;width:clamp(110px,min(19vw,27vh),250px);aspect-ratio:2/3;border:0;background:none;cursor:pointer;position:relative;perspective:700px;animation:bob 7s ease-in-out infinite;animation-delay:var(--d,0s)}
 .ebook:nth-child(odd){margin-bottom:calc(var(--lift,0)*1px)}
 .ebook .cv{position:absolute;inset:0;border-radius:2px 6px 6px 2px;transform:rotateY(-14deg) rotateZ(var(--r,0deg));transition:transform .5s cubic-bezier(.2,.8,.2,1),box-shadow .5s;box-shadow:0 30px 50px rgba(10,5,0,.5),inset 5px 0 0 rgba(0,0,0,.16)}
 .ebook:hover .cv,.ebook:focus-visible .cv{transform:rotateY(-2deg) rotateZ(0deg) translateY(-14px) scale(1.04);box-shadow:0 50px 70px rgba(10,5,0,.55),inset 5px 0 0 rgba(0,0,0,.16)}
@@ -180,3 +180,30 @@ body.calm .gate-sky,body.calm .ebook{animation:none}
 .pass-or{margin-top:14px;font:600 .7rem var(--text);letter-spacing:.18em;text-transform:uppercase;color:var(--ink-2)}
 .pass .pass-paper{display:block;text-align:center;margin-top:8px;padding:11px 16px;font-size:.9rem}
 .pass .pass-news{display:block;text-align:center;margin-top:14px;padding:11px 16px;font-size:.9rem}
+
+/* readability pass */
+.top::before{content:"";position:fixed;inset:0 0 auto 0;height:110px;background:linear-gradient(180deg,rgba(18,12,7,.62),transparent);pointer-events:none;z-index:-1}
+.top nav a{font-size:.92rem;font-weight:600}
+.mark{font-size:1.45rem}
+.gauge i b{font-size:.8rem;font-weight:600;background:rgba(18,12,7,.55);padding:3px 8px;right:22px}
+.beat{text-shadow:0 2px 6px rgba(18,12,7,.7),0 4px 36px rgba(18,12,7,.7)}
+.b0 p{font-size:clamp(1.2rem,1.9vw,1.55rem);font-weight:500}
+.lead{font-size:.95rem;font-weight:600;color:#FFE9C8;text-shadow:0 1px 10px rgba(18,12,7,.8)}
+.p-high::after,.p-day::after{background:linear-gradient(90deg,rgba(18,12,7,.88),rgba(18,12,7,.55) 62%,rgba(18,12,7,.25))}
+.promise h3{text-shadow:0 2px 6px rgba(18,12,7,.7),0 4px 40px rgba(18,12,7,.7)}
+.promise p{font-size:clamp(1.2rem,2vw,1.55rem);font-weight:500;color:#fff;text-shadow:0 1px 10px rgba(18,12,7,.8)}
+.shelf-head{padding:18px 26px 20px 0;margin-left:0}
+.shelf-head::before{content:"";position:absolute;inset:-30px -60px -20px -40vw;background:radial-gradient(60% 90% at 35% 45%,rgba(18,12,7,.7),transparent 75%);z-index:-1}
+.shelf-head p{font-size:1.15rem;font-weight:500;text-shadow:0 1px 10px rgba(18,12,7,.8)}
+.ebook .price{font-size:.9rem;background:var(--night)}
+.mstep{font-size:clamp(1.2rem,1.9vw,1.6rem)}
+.perks{font-size:clamp(1.05rem,1.5vw,1.25rem)}
+.perks li{text-shadow:0 1px 10px rgba(18,12,7,.8)}
+.shade{background:linear-gradient(90deg,rgba(18,12,7,.92),rgba(18,12,7,.6) 68%,rgba(18,12,7,.2))}
+.two p{font-size:1.02rem;opacity:1;text-shadow:0 1px 10px rgba(18,12,7,.8)}
+.close .sticky::after{background:linear-gradient(90deg,rgba(18,12,7,.82),rgba(18,12,7,.4) 60%,transparent)}
+.display{text-shadow:0 2px 24px rgba(18,12,7,.5)}
+.gate-title,.gate-mark{text-shadow:0 2px 24px rgba(18,12,7,.7)}
+.pass-top,.pass-by,.opt small,.pass-state,.pass-demo{color:#4E3B2E}
+.opt small,.pass-demo{font-size:.85rem}
+footer{color:#C9B89E;font-size:.95rem}
