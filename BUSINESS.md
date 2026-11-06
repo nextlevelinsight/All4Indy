@@ -113,3 +113,11 @@ Do not rely on AI-text detectors; they are unreliable and will wrongly flag real
 - Refund window and payout schedule.
 - A written author agreement and reader terms (get a lawyer to check, especially the lifetime-access and email-sharing wording).
 - Pilot: 10 to 20 authors in one genre, one full cycle of pay, deliver, payout.
+
+---
+
+## Update: newsletter link plus our own list (replaces author email sharing)
+- **Authors** do not receive buyer emails. Every buyer sees the author's own newsletter sign-up link (opens in a new tab on the author's page), so consent and unsubscribes sit with the author's own email tool.
+- **We** keep the buyer's email for the receipt and library. An unticked, optional checkbox adds them to The Open Shelf's newsletter and the "authors you've bought from" email (author site, newsletter link, paperback link). Needs one-click unsubscribe and a stored record of when and to what wording they agreed.
+- Seller portal: replace the "opted-in emails" list with newsletter-link click counts.
+- Open point: authors may dislike us holding the list. Say so plainly in the author agreement, always show the author's link to every buyer, and have a lawyer review the consent wording.

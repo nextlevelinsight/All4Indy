@@ -4,11 +4,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>The Open Shelf</title>
-<meta name="description" content="Independent ebooks, delivered instantly. Most of the sale goes to the author, and so does your email if you say yes.">
+<meta name="description" content="Independent ebooks, delivered instantly. Most of the sale goes to the author, and the author keeps a direct line to you.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,600;1,6..96,400;1,6..96,500&family=Figtree:wght@400;500;600&display=swap">
-<link rel="stylesheet" href="style.css?v=5">
+<link rel="stylesheet" href="style.css?v=6">
 </head>
 <body data-tone="light">
 
@@ -55,7 +55,7 @@
     <div class="promises">
       <p class="lead">What happens to a sale, here:</p>
       <div class="promise" data-promise><h3>Most of it goes to the author.</h3><p>Not a sliver. The larger share, every time.</p></div>
-      <div class="promise" data-promise><h3>So does your name.</h3><p>If you say yes at checkout, the author gets your email and can write to you directly. If you say no, they do not.</p></div>
+      <div class="promise" data-promise><h3>So does the conversation.</h3><p>Every book comes with a link to the author's own newsletter. Join if you like, and they can write to you directly.</p></div>
       <div class="promise" data-promise><h3>And we help them be found.</h3><p>Shelves, newsletters and quiet word of mouth. That is what our small share pays for.</p></div>
     </div>
   </div>
@@ -78,7 +78,7 @@
       <h2 class="display">Where it goes.</h2>
       <p class="mstep" data-m="0"><b>You pay.</b> One price, one click, no account hoops.</p>
       <p class="mstep" data-m="1"><b>You read.</b> The ebook lands in your inbox straight away.</p>
-      <p class="mstep" data-m="2"><b>They are paid.</b> The larger share goes to the author. You choose whether they also get your email.</p>
+      <p class="mstep" data-m="2"><b>They are paid.</b> The larger share goes to the author. Their newsletter link is right there, if you want to hear from them.</p>
       <p class="mstep" data-m="3"><b>We keep a small cut.</b> It keeps the lights on and pays for marketing their book.</p>
       <div class="split" aria-label="Most of each sale goes to the author, a small share to The Open Shelf">
         <span class="s-author"><em>Author</em></span><span class="s-us"><em>Shelf</em></span>
@@ -96,13 +96,13 @@
         <h2 class="display">Bring a book. <em>Keep your readers.</em></h2>
         <ul class="perks">
           <li><b>You keep the larger share.</b> Of every sale, paid out to you.</li>
-          <li><b>You get the buyer's email.</b> With their say-so, so the list is truly yours.</li>
+          <li><b>Your list, your link.</b> Every buyer sees your newsletter sign-up, and it opens on your own page, so the list is truly yours.</li>
           <li><b>We help you market it.</b> Shelves, newsletters, launch weeks.</li>
           <li><b>No website needed.</b> We host the page, take the payment and send the file.</li>
           <li><b>Sell paper too.</b> Readers can jump from your ebook page straight to your own site to order the physical book.</li>
         </ul>
         <div class="two">
-          <div><h3>Sell through us</h3><p>We handle checkout and delivery. You get paid and get the emails.</p></div>
+          <div><h3>Sell through us</h3><p>We handle checkout and delivery. You get paid and your newsletter link is shown to every buyer.</p></div>
           <div><h3>Send readers to you</h3><p>Already have a store, or a print edition? Readers go straight to your site, and we earn a small referral.</p></div>
         </div>
         <a class="btn sun" href="mailto:hello@example.com?subject=My%20book%20for%20The%20Open%20Shelf">Tell us about your book</a>
@@ -136,17 +136,18 @@
       <h3 id="passTitle"></h3>
       <p class="pass-by" id="passBy"></p>
       <p class="pass-line"><span>Most of this sale goes to the author.</span></p>
-      <label class="opt"><input type="checkbox" id="optIn"><span>Share my email with the author so they can write to me. <small>Your choice, and you can say no.</small></span></label>
-      <p class="pass-state" id="passState" aria-live="polite">The author receives: the sale only.</p>
+      <a class="btn line dark pass-news" id="passNews" href="https://example.com" target="_blank" rel="noopener">Join the author's newsletter</a>
+      <label class="opt"><input type="checkbox" id="optIn"><span>Also send me The Open Shelf's news, and the websites of authors I've bought from. <small>Optional. Unsubscribe in one click.</small></span></label>
+      <p class="pass-state" id="passState" aria-live="polite">We use your email for your receipt and download only.</p>
       <div class="actions"><button class="btn sun" type="button" id="passGo">Get the ebook</button><button class="btn line dark" type="button" id="passClose">Keep browsing</button></div>
       <p class="pass-or">Prefer paper?</p>
       <a class="btn line dark pass-paper" id="passPaper" href="https://example.com" target="_blank" rel="noopener">Order the paperback from the author's own site</a>
-      <p class="pass-demo">Demo only. No payment is taken, and the author link is a placeholder.</p>
+      <p class="pass-demo">Demo only. No payment is taken, and the author links are placeholders.</p>
       <div class="pass-stamp" aria-hidden="true">Sent</div>
     </div>
   </div>
 </div>
 
-<script src="app.js?v=5"></script>
+<script src="app.js?v=6"></script>
 </body>
 </html>

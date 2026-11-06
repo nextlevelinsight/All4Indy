@@ -173,7 +173,7 @@
   const wrap = $('#passWrap'), pass = $('.pass', wrap);
   const opt = $('#optIn'), state = $('#passState'), goBtn = $('#passGo');
   let opener = null, cur = null;
-  function describe() { state.textContent = opt.checked ? 'The author receives: the sale, and your email.' : 'The author receives: the sale only.'; }
+  function describe() { state.textContent = opt.checked ? 'We will also send you our news and the sites of authors you buy from.' : 'We use your email for your receipt and download only.'; }
   opt.addEventListener('change', describe);
   function openPass(b, el) {
     opener = el; cur = b;
@@ -181,13 +181,14 @@
     const c = $('#passCover'); c.style.setProperty('--c', b.c); c.innerHTML = coverHTML(b);
     c.firstChild.style.cssText += ';position:absolute;inset:0;border-radius:0;box-shadow:none';
     $('#passPaper').href = 'https://example.com/' + b.t.toLowerCase().replace(/[^a-z]+/g, '-'); $('#passPaper').setAttribute('aria-label', 'Order the paperback of ' + b.t + ' from ' + b.a + "'s own site, opens in a new tab");
+    $('#passNews').href = 'https://example.com/newsletter/' + b.a.toLowerCase().replace(/[^a-z]+/g, '-'); $('#passNews').setAttribute('aria-label', 'Join ' + b.a + "'s newsletter, opens in a new tab");
     opt.checked = false; describe(); pass.classList.remove('sent'); goBtn.textContent = 'Get the ebook (' + b.p + ')';
     wrap.hidden = false; goBtn.focus();
   }
   function closePass() { wrap.hidden = true; if (opener) opener.focus(); }
   goBtn.addEventListener('click', () => {
     pass.classList.add('sent');
-    state.textContent = opt.checked ? 'Sent to your inbox. The author can now write to you.' : 'Sent to your inbox. The author stays anonymous to you.';
+    state.textContent = opt.checked ? 'Sent to your inbox. You will also get our news and the sites of authors you buy from.' : 'Sent to your inbox. We will only email you about this order.';
   });
   $('#passClose').addEventListener('click', closePass);
   wrap.addEventListener('click', e => { if (e.target === wrap) closePass(); });
