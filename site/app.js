@@ -66,7 +66,7 @@
   const scrub = (v, p, k) => {
     if (calm || !v.duration) return;
     const target = p * (v.duration - .05);
-    k.t += (target - k.t) * .12;
+    k.t += (target - k.t) * .06;
     if (Math.abs(v.currentTime - k.t) > .02) v.currentTime = k.t;
   };
   const k1 = { t: 0 }, k2 = { t: 0 };
@@ -200,6 +200,24 @@
     const target = id === 'shelf' ? room('shelf') : room(id);
     if (!target) return; e.preventDefault();
     const off = id === 'authors' ? target.offsetHeight * .55 : id === 'shelf' ? 0 : 0;
-    scrollTo({ top: target.offsetTop + off, behavior: calm ? 'auto' : 'smooth' });
+    glide(target.offsetTop + off);
   }));
+
+  // Slow, eased glide for in-page links (about 500px per second, 2s to 16s). Any wheel, touch or key press stops it.
+  let gliding = 0;
+  const stopGlide = () => { gliding++; };
+  ['wheel', 'touchstart', 'keydown', 'pointerdown'].forEach(ev => addEventListener(ev, stopGlide, { passive: true }));
+  function glide(to) {
+    const from = scrollY, dist = to - from;
+    if (calm || Math.abs(dist) < 4) { scrollTo(0, to); return; }
+    const dur = Math.min(16000, Math.max(2000, Math.abs(dist) / 0.5));
+    const id = ++gliding, t0 = performance.now();
+    const step = now => {
+      if (id !== gliding) return;
+      const t = Math.min(1, (now - t0) / dur), e = -(Math.cos(Math.PI * t) - 1) / 2;
+      scrollTo(0, from + dist * e);
+      if (t < 1) requestAnimationFrame(step);
+    };
+    requestAnimationFrame(step);
+  }
 })();
