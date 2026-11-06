@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Open Shelf</title>
+<meta name="description" content="Indie books, linked straight to the author's own page. No middle shelf.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="nav">
+  <a class="brand" href="#top">The Open Shelf</a>
+  <nav><a href="#shelf">Read</a><a href="#authors">Write</a></nav>
+</header>
+
+<main id="top">
+
+<!-- ROOM 1: threshold -->
+<section class="room hero" id="hero" data-room>
+  <div class="hero-stage">
+    <div class="layer l-wall" data-depth="0.15"></div>
+    <div class="layer l-window" data-depth="0.25"><span></span><span></span><span></span></div>
+    <div class="layer l-shelf" data-depth="0.5">
+      <div class="shelf-row r1"></div>
+      <div class="shelf-row r2"></div>
+    </div>
+    <div class="layer l-dust" data-depth="0.8" aria-hidden="true"></div>
+    <div class="layer l-front" data-depth="1.2"><div class="stack"><i></i><i></i><i></i></div></div>
+    <div class="hero-copy">
+      <h1>Books, straight from the people who wrote them.</h1>
+      <p>A small, open shelf of independent authors. Every book sends you to the author's own page, so they keep the sale.</p>
+      <div class="actions">
+        <a class="btn solid" href="#shelf">I read</a>
+        <a class="btn ghost" href="#authors">I write</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ROOM 2: the idea -->
+<section class="room idea" id="idea" data-room style="--span:320vh">
+  <div class="sticky">
+    <div class="idea-lines">
+      <p data-line>Most bookshops sit in the middle.</p>
+      <p data-line>They take a cut, hold the customer, and set the terms.</p>
+      <p data-line>This one points. Then it steps aside.</p>
+      <p data-line class="strong">No middle shelf.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ROOM 3: the shelf (peak) -->
+<section class="room shelf" id="shelf" data-room style="--span:560vh">
+  <div class="sticky">
+    <div class="shelf-head">
+      <h2>The shelf</h2>
+      <p>Sample books and authors, made up to show how it works. Pick one.</p>
+    </div>
+    <div class="track-wrap"><div class="plank" aria-hidden="true"></div><div class="track" id="track"></div></div>
+  </div>
+</section>
+
+<!-- ROOM 4: the money -->
+<section class="room money" id="money" data-room style="--span:360vh">
+  <div class="sticky">
+    <div class="money-copy">
+      <h2>Where the money goes</h2>
+      <p class="step" data-step="0">A reader finds a book here.</p>
+      <p class="step" data-step="1">They land on the author's own page and buy there.</p>
+      <p class="step" data-step="2">The author sells, ships and keeps the relationship.</p>
+      <p class="step" data-step="3">The shelf earns a small referral commission, agreed up front with each author.</p>
+    </div>
+    <svg class="flow" viewBox="0 0 800 300" role="img" aria-label="A reader goes from the shelf to the author's page, the author fulfils the order, and a small commission returns to the shelf.">
+      <path id="main" d="M90 150 H400 H710" />
+      <path id="back" d="M710 150 C710 270 400 270 400 270 C250 270 130 250 110 180" />
+      <g class="node n0"><circle cx="90" cy="150" r="42"/><text x="90" y="155">Reader</text></g>
+      <g class="node n1"><circle cx="400" cy="150" r="52"/><text x="400" y="147">Author's</text><text x="400" y="165">own page</text></g>
+      <g class="node n2"><circle cx="710" cy="150" r="42"/><text x="710" y="147">Order</text><text x="710" y="165">ships</text></g>
+      <g class="node n3"><rect x="40" y="228" width="140" height="44" rx="22"/><text x="110" y="255">Referral</text></g>
+    </svg>
+  </div>
+</section>
+
+<!-- ROOM 5: for authors -->
+<section class="room authors" id="authors" data-room style="--span:260vh">
+  <div class="sticky">
+    <div class="reveal-panel">
+      <div class="authors-inner">
+        <h2>Write books? Keep your readers.</h2>
+        <ol>
+          <li><b>Send us your book.</b> A cover, a short blurb and the link to your own page.</li>
+          <li><b>Agree the referral.</b> One plain number, written down before anything goes live.</li>
+          <li><b>Get found.</b> Readers click through and buy from you. You ship, you keep the sale.</li>
+        </ol>
+        <a class="btn solid light" href="mailto:hello@example.com?subject=My%20book%20for%20The%20Open%20Shelf">Tell us about your book</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ROOM 6: close -->
+<section class="room close" id="close" data-room style="--span:200vh">
+  <div class="sticky">
+    <div class="tilt-book" id="tilt" aria-hidden="true"><span>Your<br>next<br>book</span></div>
+    <div class="close-copy">
+      <h2>Take a book home. Straight from the author.</h2>
+      <div class="actions">
+        <a class="btn solid" href="#shelf">Browse the shelf</a>
+        <a class="btn ghost" href="#authors">List your book</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer><p>The Open Shelf. Sample books and authors on this page are fictional.</p></footer>
+
+<!-- library slip (signature move) -->
+<div class="slip-wrap" id="slipWrap" hidden>
+  <div class="slip" role="dialog" aria-modal="true" aria-labelledby="slipTitle">
+    <p class="slip-top">THE OPEN SHELF · BORROWER'S SLIP</p>
+    <h3 id="slipTitle"></h3>
+    <p class="slip-by"></p>
+    <div class="slip-line"><span>Fulfilled by</span><b class="slip-url"></b></div>
+    <div class="stamp" aria-hidden="true">DIRECT</div>
+    <p class="slip-note">You are going to the author's own page. They sell it, they ship it, they keep the sale.</p>
+    <div class="actions">
+      <a class="btn solid slip-go" href="#" target="_blank" rel="noopener">Go to the author</a>
+      <button class="btn ghost slip-close" type="button">Back to the shelf</button>
+    </div>
+  </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
