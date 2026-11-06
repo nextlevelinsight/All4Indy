@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,600;1,6..96,400;1,6..96,500&family=Figtree:wght@400;500;600&display=swap">
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css?v=4">
 </head>
 <body data-tone="light">
 
@@ -17,12 +17,12 @@
   <div class="gate-sky"></div>
   <div class="gate-inner">
     <p class="gate-mark">The Open Shelf</p>
-    <h1 class="gate-title">Independent books,<br><em>above the noise.</em></h1>
+    <h1 class="gate-title">Independent books,<br><em>and a seat by the window.</em></h1>
     <div class="gate-actions">
       <button class="btn sun" id="enter" type="button">Step inside</button>
       <button class="btn line" id="enterCalm" type="button">Enter without motion</button>
     </div>
-    <p class="gate-load" id="gateLoad" aria-live="polite">Gathering clouds</p>
+    <p class="gate-load" id="gateLoad" aria-live="polite">Turning on the lamps</p>
   </div>
 </div>
 
@@ -32,28 +32,26 @@
 </header>
 
 <aside class="gauge" aria-hidden="true">
-  <i data-g="hero"><b>Dawn</b></i><i data-g="idea"><b>Morning</b></i><i data-g="shelf"><b>Day</b></i><i data-g="money"><b>Noon</b></i><i data-g="authors"><b>Dusk</b></i><i data-g="close"><b>Night</b></i>
+  <i data-g="hero"><b>Door</b></i><i data-g="idea"><b>Aisle</b></i><i data-g="shelf"><b>Shelf</b></i><i data-g="money"><b>Table</b></i><i data-g="authors"><b>Nook</b></i><i data-g="close"><b>Page</b></i>
   <span class="gauge-dot"></span>
 </aside>
 
 <main id="top">
 
-<!-- 1. DAWN: scrubbed flight -->
+<!-- 1. DOOR: walk up and in (scrubbed) -->
 <section class="room hero" id="hero" data-room data-tone="dark" style="--span:520vh">
   <div class="sticky">
-    <video class="bgvid" id="vidDawn" src="assets/fly-dawn.mp4" poster="assets/sky-dawn.jpg" muted playsinline preload="auto" tabindex="-1" aria-hidden="true"></video>
-    <div class="floaters" id="heroFloaters" aria-hidden="true"></div>
+    <video class="bgvid" id="vidDawn" src="assets/walk-in.mp4" poster="assets/shop-front.jpg" muted playsinline preload="auto" tabindex="-1" aria-hidden="true"></video>
     <div class="beat b0"><h2 class="display">Books, from the people <em>who wrote them.</em></h2><p>Independent authors. Instant ebooks. No middle shelf.</p></div>
-    <div class="beat b1"><p class="whisper">Before the sun is up, somebody finishes a book.</p></div>
-    <div class="beat b2"><p class="whisper">Now it is here.<br><em>Come in.</em></p></div>
+    <div class="beat b1"><p class="whisper">Somewhere behind that door, a story is waiting.</p></div>
+    <div class="beat b2"><p class="whisper">The door is open.<br><em>Come in.</em></p></div>
   </div>
 </section>
 
-<!-- 2. MORNING: three promises, kinetic -->
-<section class="room idea" id="idea" data-room data-tone="light" style="--span:380vh">
+<!-- 2. AISLE: three promises -->
+<section class="room idea" id="idea" data-room data-tone="dark" style="--span:380vh">
   <div class="sticky">
     <div class="plate p-high"></div>
-    <div class="mist m1"></div><div class="mist m2"></div>
     <div class="promises">
       <p class="lead">What happens to a sale, here:</p>
       <div class="promise" data-promise><h3>Most of it goes to the author.</h3><p>Not a sliver. The larger share, every time.</p></div>
@@ -63,20 +61,19 @@
   </div>
 </section>
 
-<!-- 3. DAY: the shelf (peak) -->
-<section class="room shelf" id="shelf" data-room data-tone="light" style="--span:620vh">
+<!-- 3. SHELF: pick one up (peak) -->
+<section class="room shelf" id="shelf" data-room data-tone="dark" style="--span:620vh">
   <div class="sticky">
     <div class="plate p-day"></div>
-    <div class="mist m1"></div><div class="mist m3"></div>
     <div class="shelf-head"><h2 class="display">Pick one up.</h2><p>Sample ebooks by made-up authors, to show how it works.</p></div>
     <div class="track" id="track"></div>
   </div>
 </section>
 
-<!-- 4. NOON: where the money goes (second scrubbed flight) -->
-<section class="room money" id="money" data-room data-tone="light" style="--span:460vh">
+<!-- 4. TABLE: sit down, where the money goes (scrubbed) -->
+<section class="room money" id="money" data-room data-tone="dark" style="--span:460vh">
   <div class="sticky">
-    <video class="bgvid" id="vidDay" src="assets/fly-day.mp4" poster="assets/sky-day.jpg" muted playsinline preload="auto" tabindex="-1" aria-hidden="true"></video>
+    <video class="bgvid" id="vidDay" src="assets/sit-down.mp4" poster="assets/shop-table.jpg" muted playsinline preload="auto" tabindex="-1" aria-hidden="true"></video>
     <div class="money-card">
       <h2 class="display">Where it goes.</h2>
       <p class="mstep" data-m="0"><b>You pay.</b> One price, one click, no account hoops.</p>
@@ -90,7 +87,7 @@
   </div>
 </section>
 
-<!-- 5. DUSK: for authors, reveal -->
+<!-- 5. NOOK: for authors, lamp reveal -->
 <section class="room authors" id="authors" data-room data-tone="dark" style="--span:320vh">
   <div class="sticky">
     <div class="plate p-dusk base"></div>
@@ -113,14 +110,13 @@
   </div>
 </section>
 
-<!-- 6. NIGHT: close -->
+<!-- 6. PAGE: open the book -->
 <section class="room close" id="close" data-room data-tone="dark" style="--span:220vh">
   <div class="sticky">
-    <div class="plate p-night"></div>
+    <div class="plate p-night" id="bookPlate"></div>
     <canvas id="stars" aria-hidden="true"></canvas>
-    <div class="lantern" id="lantern" aria-hidden="true"><span>Your<br>next<br><em>book</em></span></div>
     <div class="close-copy">
-      <h2 class="display">Tonight's reading, <em>straight from the author.</em></h2>
+      <h2 class="display">Open it. <em>Straight from the author.</em></h2>
       <div class="actions"><a class="btn sun" href="#shelf">Browse the shelf</a><a class="btn line" href="#authors">List your book</a></div>
     </div>
   </div>
@@ -148,6 +144,6 @@
   </div>
 </div>
 
-<script src="app.js"></script>
+<script src="app.js?v=3"></script>
 </body>
 </html>

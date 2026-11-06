@@ -43,3 +43,6 @@ Rooms: separate scenes with different behaviour, no continuous camera. Devices: 
 - Signature move: the boarding pass. Clicking an ebook opens a pass with an unticked "share my email with the author" box that changes what the author receives, then stamps SENT.
 - Feeling curve: welcomed (dawn), calm certainty (morning), delight (day, peak), trust (noon), invitation (dusk), resolve (night).
 - Entry gate with "Enter without motion" option.
+
+## Revision 3: the bookstore
+The sky world is replaced by a bookshop. Same six rooms, new places: **Door** (scrubbed walk up to the open shop door), **Aisle** (three promises between shelves), **Shelf** (pick a book up), **Table** (scrubbed: sit down, coffee, a hand opens the book; where the money goes), **Nook** (armchair and lamp reveal, for authors), **Page** (push into an open book). Warm espresso, brass and honey-wood palette, single amber accent. All imagery generated with kie.ai (nano-banana-2 stills, kling image-to-video). Peak is still the Shelf.

@@ -32,25 +32,6 @@
     track.appendChild(el);
   });
 
-  // Hero floaters: covers drifting at different depths
-  const fl = $('#heroFloaters');
-  const specs = [
-    { b: 0, x: 14, y: 26, w: 7, d: 0.5, r: -8, blur: 0 },
-    { b: 3, x: 86, y: 20, w: 9, d: 0.9, r: 9, blur: 0 },
-    { b: 1, x: 74, y: 62, w: 5.5, d: 0.3, r: 5, blur: 2 },
-    { b: 5, x: 16, y: 70, w: 12, d: 1.5, r: -6, blur: 5 },
-    { b: 2, x: 92, y: 78, w: 14, d: 1.9, r: 12, blur: 7 },
-    { b: 4, x: 52, y: 10, w: 4.5, d: 0.2, r: 4, blur: 1.5 }
-  ];
-  specs.forEach(s => {
-    const d = document.createElement('div');
-    d.className = 'fl'; d.dataset.d = s.d; d.dataset.r = s.r;
-    d.style.cssText = `left:${s.x}%;top:${s.y}%;width:${s.w}vw;aspect-ratio:2/3;filter:blur(${s.blur}px);opacity:${s.blur ? .85 : 1}`;
-    d.innerHTML = coverHTML(books[s.b]);
-    d.firstChild.style.boxShadow = '0 24px 40px rgba(10,20,50,.35)';
-    fl.appendChild(d);
-  });
-
   // Gate + loader
   const gate = $('#gate'), load = $('#gateLoad');
   const vids = [$('#vidDawn'), $('#vidDay')];
@@ -61,7 +42,7 @@
   }
   const wait = setInterval(() => {
     const pct = Math.round(vids.reduce((s, x) => s + (x.duration ? (x.buffered.length ? x.buffered.end(0) / x.duration : 0) : 0), 0) / vids.length * 100);
-    load.textContent = ready() ? 'The sky is ready' : `Gathering clouds ${pct}%`;
+    load.textContent = ready() ? 'The shop is open' : `Turning on the lamps ${pct}%`;
     if (ready()) clearInterval(wait);
   }, 250);
   function enter(c) {
@@ -92,32 +73,32 @@
 
   const beats = $$('.beat'), promises = $$('[data-promise]'), msteps = $$('.mstep');
   const gaugeItems = $$('.gauge i');
-  const heroFl = $$('.fl');
-  const plates = $$('.plate');
+    const plates = $$('.plate');
   const split = $('.split');
   const dusk = $('.dusk-reveal');
-  const lantern = $('#lantern');
+  const bookPlate = $('#bookPlate');
 
-  // Stars
+  // Dust motes in lamp light
   const cv = $('#stars'), ctx = cv.getContext('2d');
   let stars = [];
   function sizeStars() {
     cv.width = cv.clientWidth * devicePixelRatio; cv.height = cv.clientHeight * devicePixelRatio;
-    stars = Array.from({ length: 90 }, () => ({ x: Math.random(), y: Math.random() * .7, z: Math.random(), s: Math.random() * 6 }));
+    stars = Array.from({ length: 90 }, () => ({ x: Math.random(), y: Math.random(), z: Math.random(), s: Math.random() * 6 }));
   }
   sizeStars(); addEventListener('resize', sizeStars);
   function drawStars(t, p) {
     ctx.clearRect(0, 0, cv.width, cv.height);
     stars.forEach(s => {
       const tw = calm ? .8 : .5 + .5 * Math.sin(t / 700 + s.s);
-      const x = (s.x - px * .04 * s.z) * cv.width, y = (s.y - (1 - p) * .06 * s.z - py * .03 * s.z) * cv.height;
-      ctx.globalAlpha = (.25 + .6 * s.z) * tw;
-      ctx.fillStyle = '#fff';
+      const rise = calm ? 0 : (t / 90000 * (.4 + s.z)) % 1;
+      const x = (s.x - px * .04 * s.z + Math.sin(t / 2600 + s.s) * .004) * cv.width, y = (((s.y - rise - (1 - p) * .06 * s.z) % 1 + 1) % 1) * cv.height;
+      ctx.globalAlpha = (.15 + .5 * s.z) * tw;
+      ctx.fillStyle = '#FFD9A0';
       ctx.beginPath(); ctx.arc(x, y, (.6 + s.z * 1.4) * devicePixelRatio, 0, 6.3); ctx.fill();
     });
   }
 
-  const tones = { hero: 'dark', idea: 'light', shelf: 'light', money: 'light', authors: 'dark', close: 'dark' };
+  const tones = { hero: 'dark', idea: 'dark', shelf: 'dark', money: 'dark', authors: 'dark', close: 'dark' };
   let lastRoom = '';
 
   function frame(t) {
@@ -145,12 +126,6 @@
       el.style.opacity = i === 0 && ph < .02 ? 1 : o;
       const off = i === 0 ? -ph * 60 : i === 2 ? (1 - clamp((ph - .72) / .1)) * 40 : (.5 - ph) * 40;
       el.style.transform = (i === 1 ? 'translate(-50%,-50%) ' : i === 0 ? 'translateY(-60%) ' : '') + `translateY(${off}px)`;
-    });
-    heroFl.forEach(f => {
-      const d = +f.dataset.d, r = +f.dataset.r;
-      const x = -px * 70 * d, y = -py * 40 * d - ph * 520 * d;
-      f.style.transform = `translate3d(${x}px,${y}px,0) rotate(${r + ph * 18 * d}deg)`;
-      f.style.opacity = clamp(1 - Math.max(0, ph - .82) / .15) * (f.style.filter.includes('blur(0') || !f.style.filter ? 1 : .88);
     });
 
     // idea: promises in sequence
@@ -183,12 +158,12 @@
     plates.forEach(pl => {
       const sec = pl.closest('[data-room]'); if (!sec) return;
       const p = progress(sec);
+      if (pl === bookPlate) { pl.style.transform = calm ? 'scale(1.1)' : `scale(${1.08 + ease(p) * .42}) translate3d(${-px * 18}px,${-py * 10}px,0)`; return; }
       if (!calm) pl.style.transform = `scale(1.18) translate3d(${-px * 24}px,${(p - .5) * -60 - py * 14}px,0)`;
     });
 
     // close: lantern + stars
     const pc = progress(room('close'));
-    if (!calm) { lantern.style.setProperty('--ry', (-16 + px * 46) + 'deg'); lantern.style.setProperty('--rx', (4 - py * 34) + 'deg'); }
     drawStars(t, pc);
     requestAnimationFrame(frame);
   }
